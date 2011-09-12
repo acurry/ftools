@@ -1,13 +1,17 @@
-(ns fallout.tools)
+
+
+
+(ns com.adc.tools.fallout.computer-sample
+  (:require [com.adc.tools.fallout/computer :as ft]))
 
 (def easy-clue "FARTING")
 (def easy-possibles 
   [ "WANTING" 
     "WAITING" 
-    "massive" 
-    "machine" 
-    "despite" 
-    "fittens"]
+    "MASSIVE" 
+    "MACHINE" 
+    "DESPITE" 
+    "FITTENS"]
   )
 (def easy-num-matches 3)                                                 
 
