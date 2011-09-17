@@ -2,7 +2,7 @@
 
 
 (ns com.adc.tools.fallout.computer-sample
-  (:require [com.adc.tools.fallout/computer :as ft]))
+  (:require [com.adc.tools.fallout.core :as ft]))
 
 (def easy-clue "FARTING")
 (def easy-possibles 
@@ -31,6 +31,29 @@
     "ENCOUNTERING"]
   )
 (def hard-num-matches 5)
+
+(def helios-clue "WEAKEN")
+(def helios-possibles
+  [ "HERALD"
+    "PERISH"
+    "HEATED"
+    "SERIES"
+    "BETTER"
+    "CENTER"
+    "MEMORY"
+    "MENTAL"
+    "WORTHY"
+    "MURDER"
+    "BEATEN"
+    "CRATER"
+    "TESTED"]
+  )
+
+(def helios-num-matches 2)
+
+(def helios-matches
+  (find-matches helios-clue helios-possibles helios-num-matches)
+  )
 
 
 (def easy-clue-possible-overlaps 
