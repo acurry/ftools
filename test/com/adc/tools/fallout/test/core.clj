@@ -1,7 +1,7 @@
 (ns com.adc.tools.fallout.test.core
   (:use [com.adc.tools.fallout.core])
-  (:use [clojure.test])
-  (:use midje.sweet))
+  (:use [midje.sweet])
+  )
 
 (def easy-clue "FARTING")
 (def easy-possibles 

@@ -79,7 +79,7 @@
         (sorted-overlaps (replicate (count betas) alpha) (seq betas))
         pruned-beta-overlaps
         (prune-overlaps-by-matches matches possible-overlaps)]
-    {:clue alpha :matches (matching-overlaps betas pruned-beta-overlaps) :at matches}
+    {:clue alpha :matches (matching-overlaps betas pruned-beta-overlaps) :at matches :places ""}
     )
   )
 

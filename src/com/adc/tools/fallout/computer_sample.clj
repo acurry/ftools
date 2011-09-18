@@ -1,6 +1,3 @@
-
-
-
 (ns com.adc.tools.fallout.computer-sample
   (:require [com.adc.tools.fallout.core :as ft]))
 
@@ -52,29 +49,29 @@
 (def helios-num-matches 2)
 
 (def helios-matches
-  (find-matches helios-clue helios-possibles helios-num-matches)
+  (ft/find-matches helios-clue helios-possibles helios-num-matches)
   )
 
 
-(def easy-clue-possible-overlaps 
-  (mapped-sorted-overlaps 
-    (replicate (count easy-possibles) easy-clue) 
-    (seq easy-possibles)
-    )
-  )
+;(def easy-clue-possible-overlaps 
+;  (ft/mapped-sorted-overlaps 
+;    (replicate (count easy-possibles) easy-clue) 
+;    (seq easy-possibles)
+;    )
+;  )
 
 
-(def easy-pruned-possibles 
-  (prune-overlaps-by-matches
-    easy-num-matches
-    clue-possible-overlaps)
-  )
+;(def easy-pruned-possibles 
+;  (ft/prune-overlaps-by-matches
+;    easy-num-matches
+;    ft/clue-possible-overlaps)
+;  )
 
 (def easy-matches
-  (find-matches easy-clue easy-possibles easy-num-matches)
+  (ft/find-matches easy-clue easy-possibles easy-num-matches)
   )
 
 (def hard-matches
-  (find-matches hard-clue hard-possibles hard-num-matches)
+  (ft/find-matches hard-clue hard-possibles hard-num-matches)
   )
 
