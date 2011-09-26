@@ -73,6 +73,50 @@
   )
 
 
+(def saspirilla-clue "REGARDING")
+(def saspirilla-num-matches 5)
+(def saspirilla-possibles
+  [ "RECEIVING"
+    "IMPORTANT"
+    "REQUIRING"
+    "BELIEVING"
+    "RECYCLING"
+    "DETHRONED"
+    "OBTAINING"
+    "LEUTENANT"
+    "REPELLENT"
+    "DETERRENT"
+    "TELEPHONE"
+    "HUMANKIND"
+    "BELONGING"
+    "UNDERWENT"
+    "REMINDING"
+    "RESILIENT"
+    "DIFFERENT"
+    "RELEASING" ])
+
+
+(def hhtools-clue "CRUMBLING")
+(def hhtools-num-matches 4)
+(def hhtools-possibles [ 
+                        "CRIMINALS"
+                        "CONVINCED"
+                        "CONCERNED"
+                        "POISONING"
+                        "REPAIRING"
+                        "MOUNTAINS"
+                        "CORPORATE"
+                        "LEUTENANT"
+                        "REPRIMAND"
+                        "HAPPENING"
+                        "CAPTURING" ])
+
+(def hhtools-matches
+  (ft/find-matches hhtools-clue hhtools-possibles hhtools-num-matches))
+
+(def saspirilla-matches
+  (ft/find-matches saspirilla-clue saspirilla-possibles saspirilla-num-matches))
+
 (def repconn-matches
   (ft/find-matches repconn-clue repconn-possibles repconn-num-matches))
 
@@ -89,6 +133,10 @@
   (overlap helios-clue (first helios-possibles)) =>
   #{[1 \E]}
   )
+
+;(fact
+;  saspirilla-matches => 
+;  #{:clue "REGARDING", :matches ("RECEIVING" "REQUIRING" "RECYCLING" "RELEASING"), :at 5, :places ""})
 
 ;(fact
 ;  (sorted-overlaps helios-clue (nth helios-possibles (- (count helios-possibles) 2))) =>
