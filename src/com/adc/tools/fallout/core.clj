@@ -71,15 +71,15 @@
     )
   )
 
-(defn find-matches [alpha betas matches]
+(defn find-matches [clue possibles num-matching-chars]
   "Return a seq containing items from betas
   where alpha has the same members at the same indexes
   according to matches."
   (let [possible-overlaps
-        (sorted-overlaps (replicate (count betas) alpha) (seq betas))
+        (sorted-overlaps (replicate (count possibles) clue) (seq possibles))
         pruned-beta-overlaps
-        (prune-overlaps-by-matches matches possible-overlaps)]
-    {:clue alpha :matches (matching-overlaps betas pruned-beta-overlaps) :at matches :places ""}
+        (prune-overlaps-by-matches num-matching-chars possible-overlaps)]
+    {:clue clue :matches (matching-overlaps possibles pruned-beta-overlaps) :at num-matching-chars :places ""}
     )
   )
 
