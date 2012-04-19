@@ -34,36 +34,5 @@
    )
   )
 
-(defn sieve-palindrome
-  ([upper] 
-   (loop [index 0 primes (s-range 2 upper)]
-            (if 
-              (square-less-than-max (nth primes index) upper)
-              primes
-              (recur 
-                (+ 1 index) (s-filter (nth primes index) primes)
-                )
-              )
-            )
-   )
-  )
-
-
-; doesn't work yet - need to figure out
-; how to capture all the primes less than lower
-; and pump them in to filter out their multiples
-(defn sieve-bounded
-  ([lower upper] 
-   (loop [index 0 primes (s-range lower upper)]
-            (if 
-              (square-less-than-max (nth primes index) upper)
-              primes
-              (recur 
-                (+ 1 index) (s-filter (nth primes index) primes)
-                )
-              )
-            )
-   )
-  )
-
-
+(defn palindromic? [n]
+  (= (seq (str n)) (reverse (str n))))
