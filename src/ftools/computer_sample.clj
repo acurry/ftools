@@ -1,5 +1,5 @@
-(ns com.adc.tools.fallout.computer-sample
-  (:require [com.adc.tools.fallout.core :as ft]))
+(ns ftools.computer-sample
+  (:require [ftools.core :as ft]))
 
 (def easy-clue "FARTING")
 (def easy-possibles 

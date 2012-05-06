@@ -1,4 +1,4 @@
-(ns com.adc.tools.fallout.core
+(ns ftools.core
   (:require [clojure.set :as s]))
 
 (defn indices 

@@ -1,5 +1,5 @@
-(ns com.adc.tools.fallout.test.core
-  (:use [com.adc.tools.fallout.core :as ft])
+(ns ftools.test.core
+  (:use [ftools.core :as ft])
   (:use [midje.sweet])
   )
 
