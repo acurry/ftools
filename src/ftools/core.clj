@@ -1,5 +1,7 @@
 (ns ftools.core
-  (:require [clojure.set :as s]))
+  (:require [clojure.set :as s])
+  (:gen-class)
+  )
 
 (defn indices 
   "Returns a seq of vectors of the form ([idx] [item]...) where 
@@ -82,4 +84,5 @@
     {:clue clue :matches (matching-overlaps possibles pruned-beta-overlaps) :at num-matching-chars :places ""}
     )
   )
+
 

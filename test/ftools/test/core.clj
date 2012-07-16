@@ -1,5 +1,5 @@
 (ns ftools.test.core
-  (:use [ftools.core :as ft])
+  (:require [ftools.core :as ft])
   (:use [midje.sweet])
   )
 
@@ -34,12 +34,12 @@
 (def hhtools-clue "CRUMBLING")
 (def hhtools-num-matches 4)
 (def hhtools-possibles 
-	[ "CRIMINALS" "CONVINCED" "CONCERNED" "POISONING" "REPAIRING" "MOUNTAINS" "CORPORATE" "LEUTENANT" "REPRIMAND" "HAPPENING" "CAPTURING" ])
+  [ "CRIMINALS" "CONVINCED" "CONCERNED" "POISONING" "REPAIRING" "MOUNTAINS" "CORPORATE" "LEUTENANT" "REPRIMAND" "HAPPENING" "CAPTURING" ])
 
 (def zm-clue "WATER")
 (def zm-num-matches 0)
 (def zm-possibles
-	[ "FIGHT" "WITER" "KOTOR" "LIFER"] )
+  [ "FIGHT" "WITER" "KOTOR" "LIFER"] )
 
 (def hhtools-matches
   (ft/find-matches hhtools-clue hhtools-possibles hhtools-num-matches))
@@ -51,7 +51,7 @@
   (ft/find-matches repconn-clue repconn-possibles repconn-num-matches))
 
 (def zm-matches
-	(ft/find-matches zm-clue zm-possibles zm-num-matches))
+  (ft/find-matches zm-clue zm-possibles zm-num-matches))
 
 (fact 
   (indices helios-clue) => 
