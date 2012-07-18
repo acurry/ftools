@@ -1,11 +1,8 @@
 (defproject ftools "1.0.0-SNAPSHOT"
   :description "Fallout tools written in clojure"
   :main ftools.core
-  :dependencies [[org.clojure/clojure "1.2.1"]
-                 [org.clojure/clojure-contrib "1.2.0"]
-                 [midje "1.2.0"]]
-  :dev-dependencies [[lein-midje "1.0.3"]
-                     [com.stuartsierra/lazytest "1.1.2"]
-                     [lein-autotest "1.1.0"]]
-  :repositories { "stuartsierra-releases" "http://stuartsierra.com/maven2" }
+  :dependencies [[org.clojure/clojure "1.4.0"]
+                 [compojure "1.1.1"]
+                 [hiccup "1.0.0"]]
+  :ring {:handler ftools.routes/app}
   )
