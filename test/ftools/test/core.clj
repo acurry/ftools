@@ -1,10 +1,9 @@
 (ns ftools.test.core
   (:require [ftools.core :as ft])
-  (:use [midje.sweet])
-  )
+  (:use [midje.sweet]))
 
 (def easy-clue "FARTING")
-(def easy-num-matches 3)                                                 
+(def easy-num-matches 3)
 (def easy-possibles 
   [ "WANTING" "WAITING" "MASSIVE" "MACHINE" "DESPITE" "FITTENS"])
 
@@ -53,32 +52,27 @@
 (def zm-matches
   (ft/find-matches zm-clue zm-possibles zm-num-matches))
 
-(fact 
-  (indices helios-clue) => 
+(fact
+  (ft/indices helios-clue) =>
   '([0 \W] [1 \E] [2 \A] [3 \K] [4 \E] [5 \N]))
 
 
 (fact
-  (position #(= % \E) helios-clue) => 
-  '(1 4))
+  (ft/position #(= % \E) helios-clue) => '(1 4))
 
 (fact
-  (overlap helios-clue (first helios-possibles)) =>
-  #{[1 \E]}
-  )
+  (ft/overlap helios-clue 
+           (first helios-possibles)) => #{[1 \E]})
 
 (def helios-sorted-overlaps
-  (sorted-overlaps helios-clue (get helios-possibles 11)))
+  (ft/sorted-overlaps helios-clue (get helios-possibles 11)))
 
 (def easy-matches
-  (ft/find-matches easy-clue easy-possibles easy-num-matches)
-  )
+  (ft/find-matches easy-clue easy-possibles easy-num-matches))
 
 (def hard-matches
-  (ft/find-matches hard-clue hard-possibles hard-num-matches)
-  )
+  (ft/find-matches hard-clue hard-possibles hard-num-matches))
 
 (def helios-matches
-  (ft/find-matches helios-clue helios-possibles helios-num-matches)
-  )    
+  (ft/find-matches helios-clue helios-possibles helios-num-matches))
 

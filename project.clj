@@ -3,6 +3,7 @@
   :main ftools.core
   :dependencies [[org.clojure/clojure "1.4.0"]
                  [compojure "1.1.1"]
-                 [hiccup "1.0.0"]]
+                 [hiccup "1.0.0"]
+                 [midje "1.4.0"]]
   :ring {:handler ftools.routes/app}
   )
